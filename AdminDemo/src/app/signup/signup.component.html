@@ -1,0 +1,96 @@
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Concept - Bootstrap 4 Admin Dashboard Template</title>
+    <!-- Bootstrap CSS -->
+    <style>
+    html,
+    body {
+        height: 100%;
+    }
+
+    body {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    </style>
+</head>
+<body>
+    <!-- ============================================================== -->
+    <!-- signup form  -->
+    <!-- ============================================================== -->
+    <form [formGroup] ="signupForm" (ngSubmit)="onCreate()" class="splash-container">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="mb-1">Registrations Form</h3>
+                <p>Please enter your user information.</p>
+            </div>
+        
+            <div class="card-body">
+                <!-- <div class="form-group">
+                    <input class="form-control form-control-lg" type="text" name="nick" required="" placeholder="Fullname" formControlName="FULLNAME" autocomplete="off">
+                    <div *ngIf="signupForm.controls.FULLNAME.invalid && (signupForm.controls.FULLNAME.dirty ||signupForm.controls.FULLNAME.touched)">
+                        <small *ngIf="signupForm.controls.FULLNAME.errors.required" class="text-danger">Fullname is required.</small>
+                    </div>
+                </div> -->
+                <div class="form-group">
+                    <input class="form-control form-control-lg" type="text" name="nick" required="" placeholder="Username" formControlName="USERNAME" autocomplete="off">
+                    <div *ngIf="signupForm.controls.USERNAME.invalid && (signupForm.controls.USERNAME.dirty ||signupForm.controls.USERNAME.touched)">
+                        <small *ngIf="signupForm.controls.USERNAME.errors.required" class="text-danger">Username is required.</small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input class="form-control form-control-lg" type="email" name="email" required="" placeholder="E-mail" formControlName="EMAIL" autocomplete="off">
+                    <div *ngIf="signupForm.controls.EMAIL.invalid && (signupForm.controls.EMAIL.dirty ||signupForm.controls.EMAIL.touched)">
+                        <small *ngIf="signupForm.controls.EMAIL.errors.required" class="text-danger">Email is required.</small>
+                        <small *ngIf="signupForm.controls.EMAIL.errors.email" class="text-danger" >Email is invalid</small>
+                    </div>
+                    
+                </div>
+                <div class="form-group">
+                    <input class="form-control form-control-lg" id="pass1" type="password" required="" formControlName="PASSWORD" placeholder="Password">
+                    <div *ngIf="signupForm.controls.PASSWORD.invalid && (signupForm.controls.PASSWORD.dirty ||signupForm.controls.PASSWORD.touched)">
+                        <small *ngIf="signupForm.controls.PASSWORD.errors.required" class="text-danger">Password is required.</small>
+                        
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input  class="form-control form-control-lg" required="" type="password" placeholder="Confirm" formControlName="CONFIRMPASSWORD" > 
+                    <div *ngIf="signupForm.controls.CONFIRMPASSWORD.invalid && (signupForm.controls.CONFIRMPASSWORD.dirty ||signupForm.controls.CONFIRMPASSWORD.touched)">
+                        <small *ngIf="signupForm.controls.CONFIRMPASSWORD.errors.required" class="text-danger">ConfirmPassword is required.</small>
+                        <small *ngIf="signupForm.controls.CONFIRMPASSWORD.errors.mustMatch" class="text-danger">Password and ConfirmPassword does not match</small>
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <button (click)="createAccount()" [disabled]="signupForm.invalid" class="btn btn-block btn-primary" type="submit">Register My Account</button>
+                </div>
+                <div class="form-group">
+                    <label class="custom-control custom-checkbox">
+                        <input class="custom-control-input" type="checkbox"><span class="custom-control-label">By creating an account, you agree the <a href="#">terms and conditions</a></span>
+                    </label>
+                </div>
+                <!-- <div class="form-group row pt-0">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-2">
+                        <button class="btn btn-block btn-social btn-facebook " type="button">Facebook</button>
+                    </div>
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <button  class="btn btn-block btn-social btn-google" type="button">Firebase</button>
+                    </div>
+                </div> -->
+            </div>
+        
+            <div class="card-footer bg-white">
+                <p>Already member? <a href="/"  class="text-secondary">Login Here.</a></p>
+            </div>
+        </div>
+    </form>
+
+
+ 
+</body>
